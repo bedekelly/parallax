@@ -1,0 +1,53 @@
+body,html {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+img {
+    -webkit-user-drag: none;
+    margin: 0;
+    width: 100vw;
+    position: absolute;
+    bottom: -5vw;
+}
+
+.clouds {
+    bottom: 28vw;
+}
+
+.birds {
+    bottom: 20vw;
+    width: 20vw;
+    right: 5vw;
+}
+
+.container {
+    transform: scale(1.2);
+    width: 100vw;
+    height: 100vh;
+}
+
+.hills-1 {
+    bottom: -7vw;
+}
+
+
+/*.back-mountain {*/
+    /*filter: blur(3px);*/
+/*}*/
+
+/*.clouds {*/
+    /*filter: blur(5px);*/
+/*}*/
+
+/*.front-mountain {*/
+    /*filter: blur(1.5px);*/
+/*}*/
