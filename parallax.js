@@ -7,11 +7,11 @@ document.addEventListener("mousemove", event => {
 });
 
 
-document.addEventListener("deviceorientation", event => {
-    const height = event.beta / 90;
+window.addEventListener("deviceorientation", event => {
+    const height = -event.beta / 90;
     const width = event.gamma / 180;
     updatePositions(height, width);
-});
+}, true);
 
 
 const elements = [
@@ -27,6 +27,6 @@ function updatePositions(height, width) {
         const translateVH = i / elements.length * maxVHTranslation;
         const translateVW = i / elements.length * maxVWTranslation;
 
-        elements[i].style.transform = `translate3d(${translateVW}vw, ${translateVH}vw, 0)`;
+        elements[i].style.transform = `translate3d(${translateVW}vh, ${translateVH}vh, 0)`;
     }
 }

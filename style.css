@@ -1,6 +1,7 @@
 body,html {
     padding: 0;
     margin: 0;
+    max-height: 100vh;
     overflow: hidden !important;
 }
 
@@ -41,34 +42,37 @@ img {
 
 
 /*.back-mountain {*/
-    /*filter: blur(3px);*/
+    /*filter: blur(2px);*/
 /*}*/
 
-/*.clouds {*/
-    /*filter: blur(5px);*/
-/*}*/
+/*!*.clouds {*!*/
+    /*!*filter: blur(5px);*!*/
+/*!*}*!*/
 
 /*.front-mountain {*/
-    /*filter: blur(1.5px);*/
+    /*filter: blur(1px);*/
 /*}*/
 
 
 @media screen and (max-width: 600px) {
-    .container {
-        position: fixed;
-        transform: scale(3);
-        overflow: hidden;
-        top: 0;
-        height: 50vh;
+    img {
+        max-width: 200vw;
+        object-fit: scale-down;
+        object-position: left bottom;
+        position: absolute;
+        scale: 3;
+        bottom: 10vh;
     }
 
     .birds {
-        left: 50vw;
+        bottom: 30vh;
+        right: 10vw;
+        scale: 2;
     }
 
     .clouds {
-        left: 25vw;
-        bottom: 45vw;
+        left: 0;
+        bottom: 45vh;
         scale: 0.5;
     }
 }
