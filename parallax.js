@@ -7,6 +7,13 @@ document.addEventListener("mousemove", event => {
 });
 
 
+document.addEventListener("deviceorientation", event => {
+    const height = event.beta / 90;
+    const width = event.gamma / 180;
+    updatePositions(height, width);
+});
+
+
 const elements = [
     "background", "clouds", "back-mountain", "front-mountain",
     "hills-4", "hills-3", "hills-2", "hills-1", "birds"
